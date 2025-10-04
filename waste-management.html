@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System</title>
+    <link rel="stylesheet" href="waste-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <h1>WasteWise</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#report">Report Waste</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Smart Waste Management for a Cleaner Future</h1>
+            <p>Join us in our mission to create a cleaner, greener environment through efficient waste management practices.</p>
+            <div class="hero-buttons">
+                <a href="#report" class="report-btn">Report Waste</a>
+                <a href="#services" class="learn-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive waste management solutions for a cleaner environment</p>
+        </div>
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <h3>Waste Collection</h3>
+                <p>Schedule timely collection of waste from your location with our efficient collection service.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Recycling Programs</h3>
+                <p>Participate in our recycling initiatives to help reduce landfill waste and conserve resources.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Organic Waste Processing</h3>
+                <p>Convert your organic waste into valuable compost through our specialized processing facilities.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Waste Reporting</h3>
+                <p>Report waste accumulation in your area for prompt cleanup and disposal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="report" class="report-section">
+        <div class="section-header">
+            <h2>Report Waste</h2>
+            <p>Help us keep our community clean by reporting waste</p>
+        </div>
+        <div class="report-container">
+            <div class="report-image">
+                <img src="https://img.freepik.com/premium-photo/colorful-recycling-bins-with-recycling-symbols-public-places-waste-management-recycling_140555-3473.jpg" alt="Waste Reporting">
+            </div>
+            <div class="report-form">
+                <form id="waste-report-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="waste-type">Waste Type</label>
+                        <select id="waste-type" name="waste-type" required>
+                            <option value="">Select Waste Type</option>
+                            <option value="organic">Organic</option>
+                            <option value="inorganic">Inorganic</option>
+                            <option value="mixed">Mixed</option>
+                            <option value="dry waste">Dry Waste</option>
+                            <option value="wet waste">Wet Waste</option>
+                            <option value="household">Household</option>
+                            <option value="river garbage">River Garbage</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Location Description</label>
+                        <textarea id="description" name="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Image</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Report</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>About Us</h2>
+            <p>Our mission and vision for a cleaner environment</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1610141160723-d2d346e73766?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhc3RlJTIwbWFuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" alt="About WasteWise">
+            </div>
+            <div class="about-text">
+                <h3>Who We Are</h3>
+                <p>WasteWise is a dedicated waste management system committed to creating a cleaner, healthier environment for our communities. Our team of experts works tirelessly to implement efficient waste collection, segregation, and disposal methods.</p>
+                
+                <h3>Our Mission</h3>
+                <p>We aim to revolutionize waste management practices by implementing sustainable solutions that minimize environmental impact while maximizing resource recovery.</p>
+                
+                <h3>Our Vision</h3>
+                <p>A world where waste is viewed as a resource, where communities thrive in clean environments, and where sustainable waste management practices are the norm.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h4>100+</h4>
+                        <p>Reports Processed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>30+</h4>
+                        <p>Waste Collections</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>0+</h4>
+                        <p>Clean Areas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team for any inquiries</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Rajiv Gandhi Education City, Sonepat, Harayana</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 997 119 9989</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>42223210064@stu.srmuniversity.ac.in</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/share/1UDk9V3VHJ/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kanishk_yaduvanshii?igsh=MWFpcmJqcjhmaHNidQ=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kanishak-kumar-yadav-527a51343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="contact-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="contact-subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-recycle"></i>
+                <h2>WasteWise</h2>
+                <p>Smart waste management solutions for a cleaner future.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#report">Report Waste</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates and tips on waste management.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 WasteWise. All rights reserved.</p>
+            <div class="footer-social">
+              
+                <a href="https://www.linkedin.com/in/manjeet-saini-550615229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="waste-management.js"></script>
+</body>
+</html> 
