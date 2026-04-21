@@ -1,0 +1,40 @@
+services:
+  web:
+    image: ${DOCKERHUB_USERNAME}/wastewise:latest
+    container_name: wms_web
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - wms_network
+
+  db:
+    image: ${DOCKERHUB_USERNAME}/wastewise-db:latest
+    container_name: wms_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - "3307:3306"
+    volumes:
+      - wms_db_data:/var/lib/mysql
+    networks:
+      - wms_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+volumes:
+  wms_db_data:
+
+networks:
+  wms_network:
+    driver: bridge

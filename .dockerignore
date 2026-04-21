@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env.local
+.vscode
+node_modules
+npm-debug.log
+*.md
+.DS_Store
+Dockerfile*
+docker-compose*.yml

@@ -70,11 +70,13 @@ INSERT INTO `adminlogin_tbl` (`id`, `name`, `email`, `password`, `code`, `status
 --
 
 CREATE TABLE `contact` (
-  `fname` varchar(20) NOT NULL,
-  `lname` varchar(20) NOT NULL,
-  `contactEmail` varchar(20) NOT NULL,
-  `contactPhone` varchar(10) NOT NULL,
-  `comment` varchar(2000) NOT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(100) NOT NULL,
+  `lname` varchar(100) NOT NULL,
+  `contactEmail` varchar(255) NOT NULL,
+  `contactPhone` varchar(20) NOT NULL,
+  `comment` varchar(2000) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
